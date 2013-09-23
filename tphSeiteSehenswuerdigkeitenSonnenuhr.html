@@ -1,0 +1,105 @@
+<img src="images/sehenswuerdigkeiten/sonnenuhr/sonnenuhr.jpg" />
+<div class="section-container accordion" data-section="accordion">
+    <section>
+        <p class="title" data-section-title>
+            <a href="#">
+                <span class="tphSpracheDE">Hören Sie die Informationen</span>
+                <span class="tphSpracheEN">Listen to the information</span>
+                <span class="tphSprachePD">Lustern tau de Toon</span>
+            </a>
+        </p>
+        <div class="content" data-section-content>
+            <!-- Audio-Player -->
+            <div id="tphPlayer">
+                <!-- Kontrollelemente des Players -->
+                <div class="tphPlayerControl" style="display: none">
+                    <div class="row">
+                        <!-- Kontrollelement: Abspielen -->
+                        <div class="small-4 columns">
+                            <a id="tphPlayButton" href="#">
+                                <img src="images/toolbar/icon-play.png" />
+                            </a>
+                        </div>
+                        <!-- Kontrollelement: Pause -->
+                        <div class="small-4 columns">
+                            <a id="tphPauseButton" href="#" onclick="tphAudioPause();">
+                                <img src="images/toolbar/icon-pause.png" />
+                            </a>
+                        </div>
+                        <!-- Kontrollelement: Stop -->
+                        <div id="tphStopButton" class="small-4 columns">
+                            <a href="#" onclick="tphAudioStoppen();">
+                                <img src="images/toolbar/icon-stop.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tphPlayerKeineDateien">
+                    <p>Sie habe keine Audio-Inhalte heruntergeladen oder die von Ihnen gewählte Audio-Sprache ist noch nicht verfügbar. Haben Sie noch keine Audio-Inhalte heruntergeladen, können Sie dies in den Einstellungen nachholen. Dazu klicken Sie bitte <a href="#tphSeiteEinstellungen">hier</a> und wählen "Download starten".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p class="title" data-section-title>
+            <a href="#">
+                <span class="tphSpracheDE">Über die Sonnenuhr</span> <!-- auf deutsch -->
+                <span class="tphSpracheEN">About the sundial</span> <!-- auf englisch -->
+                <span class="tphSprachePD">Över dat Sünnenklock</span> <!-- auf plattdeutsch -->
+            </a>
+        </p>
+        <div class="content" data-section-content>
+            <div class="tphSpracheDE">
+                <p>Diese horizontale Sonnenuhr wurde für den Bahnhofsvorplatz berechnet. Der 3m lange Schattenstab verläuft parallel zur Erdachse und zeigt in Richtung auf den Polarstern. Er besteht aus einer gußeisernen Säule des alten Bahnhofsgebäudes, verlängert um ein modernes Edelstahlrohr mit einer Kugel. Fällt der Schatten auf das abgebrochene Kapitell, zeigt die Sonnenuhr die Südrichtung der Sonne un den wahren Huder Mittag an, der erheblich von 12 Uhr mitteleuropäischer Zeit abweicht. Zum Sommeranfang im Juni erreicht die Sonne ihren höchsten Stand, und der Schatten des Schattenstabes reicht mittags nur noch bis zur Kugel des Kapitells. Da die Erde auf ihrer elliptischen Umlaufbahn um die Sonne sich ungleichmäßig bewegt, geht die Sonnenuhr mal vor und mal nach. Die angezeite Zeit muss mit einer Tabelle korrigiert werden. Während der Sommerzeit ist außerdem eine Stunde hinzu zu rechnen.</p>
+            </div>
+            <div class="tphSpracheEN">
+                <p>This horizontal sundial has been calculated for the station forecourt. The 3m long gnomon is parallel to the Earth's axis and points toward the North Star. It consists of a cast-iron column of the old station building, extended by a modern stainless steel tube with a ball. The shadow falls on the broken capitals, the sundial shows the south direction of the sun un the true Huder noon on that deviates considerably clock of 12 Central European Time. By early summer in June, the sun reaches its highest point, and the shadow of the gnomon at noon only reaches up to the ball of the capital. Since the Earth in its elliptical orbit around the Sun moves uneven, the sundial's time before and after times. The displayed time need to be corrected with a table. During the summer time is also expected to add one hour.</p>
+            </div>
+            <div class="tphSprachePD">
+                <p>Wir haben noch keinen Inhalt</p>
+            </div>
+            <p>
+                <a class="th radius tphGalerie" href="images/sehenswuerdigkeiten/sonnenuhr/tphKarteSonnenuhr.png">
+                    <img src="images/sehenswuerdigkeiten/sonnenuhr/tphKarteSonnenuhr.png">
+                </a>
+            </p> 
+        </div>
+    </section>
+    <section>
+        <p class="title">
+            <a href="#">
+                <span class="tphSpracheDE">Bilder</span>
+                <span class="tphSpracheEN">Pictures</span>
+                <span class="tphSprachePD">Schillerotsen</span>
+            </a>
+        </p>
+        <div class="content" data-slug="section1">
+            <div class="row">
+                <div class="small-6 columns">
+                    <a class="th radius tphGalerie" href="images/sehenswuerdigkeiten/sonnenuhr/sonnenuhr.jpg">
+                        <img src="images/sehenswuerdigkeiten/sonnenuhr/sonnenuhr.jpg">
+                    </a>
+                </div>
+                <div class="small-6 columns">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+                                $(function() {
+                                    tphHeaderUberschriftAendern('Sonnenuhr');
+                                    tphSetzeEinstellungenAufSeite();
+                                    tphDateisystem('audioVorhanden', 'sonnenuhr.mp3');
+                                });
+</script>
+
+<section>
+    <p class="title">
+        <a href="#">
+        </a>
+    </p>
+    <div class="content" data-slug="section1">
+    </div>
+</section>
