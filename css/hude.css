@@ -41,6 +41,7 @@ p a {
 }
 .top-bar {
     background-color: #008A7E;
+    margin-bottom: 0;
 }
 .top-bar-section ul {
     background-color: #008A7E;
