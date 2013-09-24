@@ -1149,8 +1149,8 @@ function tphDateisystem(option, dateiname) {
                         var anzahlDateienGesamt = dateien.length;
                         var tphStorage = tphLadeLocalStorage();
                         // Zurücksetzen der Anzeige in den Einstellungen von bereits heruntergeladenen Dateien und der zu ladenen Dateien.
-                        $('#tphAnzahlAudioBereitsGeladen').html('<span id="tphAnzahlAudioBereitsGeladen">0</span>');
-                        $('#tphAnzahlAudioInsgesamt').html('<span id="tphAnzahlAudioInsgesamt">' + dateien.length + '</span>');
+                        $('#tphAnzahlAudioHeruntergeladen').html('<span id="tphAnzahlAudioHeruntergeladen">0</span>');
+                        $('#tphAnzahlAudioInsgesamt').html('<span id="tphAnzahlAudioInsgesamt">' + anzahlDateienGesamt + '</span>');
                         // Download der Dateien starten
                         for (var i = 0; i < dateien.length; i++) {
                             uri = encodeURI(dateien[i]);
@@ -1163,7 +1163,7 @@ function tphDateisystem(option, dateiname) {
                                 if (progressEvent.lengthComputable) {
                                     var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
                                     //console.log(perc + '% geladen' + downloadPfad);
-                                    $('#tphDownloadStatus').html('<p><strong>' + (Math.floor(progressEvent.loaded / progressEvent.total * 100)) + '</strong></p>');
+                                    $('#tphDownloadStatus').html('<p><strong>Download wird ausgeführt: ' + (Math.floor(progressEvent.loaded / progressEvent.total * 100)) + '</strong></p>');
                                     if (progressEvent.loaded === progressEvent.total) {
                                         var anzahlHeruntergeladen = tphStorage.getItem('tphAudioDateienHeruntergeladen');
                                         var anzahlDateien = tphAudioDateien().length;
