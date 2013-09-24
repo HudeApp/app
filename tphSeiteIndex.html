@@ -30,10 +30,14 @@
                 document.addEventListener("backbutton", function(event) {
                     parent.history.back();
                 }, false);
+                $('#tphKameraTest').dialog('open');
             }
         </script>
     </head>
     <body>
+        <div id="tphKameraTest" style="display: none">
+            Test der Kamera ...
+        </div>
         <div id="tphHeader" class="fixed">
             <nav class="top-bar" data-options="custom_back_text:true;back_text:Zurück;is_hover:false;">
                 <ul class="title-area tphHeaderUeberschrift">
@@ -571,7 +575,6 @@
                 // the event now, to handle the hash the page may have loaded with.
                 $(window).hashchange();
                 tphSetzeEinstellungenAufSeite();
-
             });
         </script>
     </body>
