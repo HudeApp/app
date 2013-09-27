@@ -6,7 +6,7 @@
     version="1.0">
     <name>Hude</name>
     <description>
-        Informationen immer dabei - für Ihren Besuch in Hude und Umgebung!
+        Diese App ist Ihr Begleiter für Ihren Aufenthalt in der Gemeinde Hude. Sie erfahren mehr über den Ort: seine Sehenswürdigkeiten und Attraktionen, aber erhalten auch gleichzeitig Informationen über Veranstaltungen, Unterkünfte, Ärzte und vieles mehr.
     </description>
     <author href="http://touristik-palette-hude.de" email="info@touristik-palette-hude.de">
         Touristik-Palette Hude e.V.
@@ -37,7 +37,7 @@
     <gap:splash src="images/system/splash/splash_android_320x200px_landscape_ldpi.png"  gap:platform="android" gap:density="ldpi" width="320" height="200" />
 
 
-    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="15" />
     <!-- <preference name="android-maxSdkVersion" value="17" /> -->
    
     <!-- iOS  -->

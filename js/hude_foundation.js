@@ -517,6 +517,7 @@ function tphLadeVeranstaltungen() {
                 append += '</div>';
                 append += '</div>';
             }
+            $('.tphAjaxLoader').hide();
             $('#tphVeranstaltungen').append(append);
         },
         error: function(XHR, textStatus, errorThrown) {
@@ -563,6 +564,7 @@ function tphNutzeGPS(option) {
                     'radius': 15,
                     'clickable': false
                 });
+                $('.tphAjaxLoader').hide();
             } else {
                 console.log('KEINE AUSREICHENDE DATENVERBINDUNG');
                 $('.tphGoogleMapsKarte').html('<div id="tphGoogleMapsKarte">' + print_r(navigator) + '</div>');
