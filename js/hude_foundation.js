@@ -1136,6 +1136,14 @@ function tphDateisystem(option, dateiname) {
                     break;
                 case 'download':
                     filesystem.root.getDirectory('Hude', {create: true, exclusive: false}, function(directory) {
+                        var tphOS = tphHoleOS();
+                            if (tphOS === 'MacOS') {
+                            directory.setMetadata(function() {
+                                console.log("The metadata was successfully set.");
+                            }, function() {
+                                 console.log("There was an error in setting the metadata");
+                            }, { "com.apple.MobileBackup": 1});
+                        }
                         var ft = new FileTransfer();
                         // Erhält die URI eines Download
                         var uri;
