@@ -82,6 +82,28 @@ function tphAudioStoppen() {
     audioTimer = null;
     pausePos = 0;
 }
+// Prüft die Internetverbindung
+function tphCheckInternetConnection() {
+    var xhr = new XMLHttpRequest();
+    var file = "http://www.touristik-palette-hude.de/images/tp-schriftzug.png";
+    var randomNum = Math.round(Math.random() * 10000);
+     
+    xhr.open('HEAD', file + "?rand=" + randomNum, false);
+     
+    try {
+        xhr.send();
+         
+        if (xhr.status >= 200 && xhr.status < 304) {
+            console.log("200");
+            return true;
+        } else {
+            console.log("FEHLER");
+            return false;
+        }
+    } catch (e) {
+        return false;
+    }
+}
 // Berechnet die dezimalen Koordinaten von Degree Minute Second
 function tphConvertDMStoDec(dmsArray) {
     var DEG = dmsArray[0]['numerator'];
