@@ -11,7 +11,7 @@
         <script src="js/vendor/custom.modernizr.js"></script>
         <!-- Phonegap Abhängigkeiten -->
         <script src="phonegap.js"></script>
-        <script src="barcodescanner.js"></script>
+        <!-- <script src="barcodescanner.js"></script> -->
         <!-- andere Abhängigkeiten -->
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery.ui.map.full.min.js" type="text/javascript"></script>
@@ -30,14 +30,10 @@
                 document.addEventListener("backbutton", function(event) {
                     parent.history.back();
                 }, false);
-                $('#tphKameraTest').dialog('open');
             }
         </script>
     </head>
     <body>
-        <div id="tphKameraTest" style="display: none">
-            Test der Kamera ...
-        </div>
         <div id="tphHeader" class="fixed">
             <nav class="top-bar" data-options="custom_back_text:true;back_text:Zurück;is_hover:false;">
                 <ul class="title-area tphHeaderUeberschrift">
@@ -522,11 +518,11 @@
         </div>
         <div class="tphFooter">
             <div class="row tphFooter">
-                <div class="large-4 small-4 columns"><a href="#tphDashboard"><img width="32" height="32" src="images/toolbar/icon-home.png" /></a></div>
+                <div class="large-3 small-3 columns"><a href="#tphDashboard"><img width="32" height="32" src="images/toolbar/icon-home.png" /></a></div>
                 <!-- <div class="large-3 small-3 columns"><a href="tphSeiteIndex.html"><img width="32" height="32" src="images/toolbar/icon-home.png" /></a></div> -->
-                <div class="large-4 small-4 columns"><a href="#" onclick="tphQRCodeScan();"><img width="32" height="32"  src="images/toolbar/icon-qr.png" /></a></div>
-                <div class="large-4 small-4 columns"><a href="#tphSeitePosition"><img width="32" height="32"  src="images/toolbar/icon-location.png" /></a></div>
-                <div class="large-4 small-4 columns"><a href="#tphSeiteEinstellungen"><img width="32" height="32"  src="images/toolbar/icon-einstellungen.png" /></a></div>
+                <div class="large-3 small-3 columns"><a href="#" onclick="tphQRCodeScan();"><img width="32" height="32"  src="images/toolbar/icon-qr.png" /></a></div>
+                <div class="large-3 small-3 columns"><a href="#tphSeitePosition"><img width="32" height="32"  src="images/toolbar/icon-location.png" /></a></div>
+                <div class="large-3 small-3 columns"><a href="#tphSeiteEinstellungen"><img width="32" height="32"  src="images/toolbar/icon-einstellungen.png" /></a></div>
             </div>
         </div>
         <div class="wrapper">
