@@ -43,7 +43,6 @@ function tphAudioAbspielen(file) {
     });
     // get audio duration
     var duration = audio.getDuration();
-    //$('#tphAudioDauer').html('<span id="tphAudioDauer">' + duration + '</span>');
     // Abspielen der Audio-Datei
     audio.play();
     audio.seekTo(pausePos * 1000);
@@ -547,7 +546,6 @@ function tphLadeVeranstaltungen() {
             console.log("ERREUR: " + errorThrown);
         }
     });
-    //$('&nbsp;').remove();
 }
 
 // Gibt per console.log() den localStorage aus
@@ -588,13 +586,10 @@ function tphNutzeGPS(option) {
                 });
                 $('.tphAjaxLoader').hide();
             } else {
-                console.log('KEINE AUSREICHENDE DATENVERBINDUNG');
-                $('.tphGoogleMapsKarte').html('<div id="tphGoogleMapsKarte">' + print_r(navigator) + '</div>');
-                cosole.log(print_r(navigator));
-                console.log('ENDE');
+                $('.tphGoogleMapsKarte').html('<div id="tphGoogleMapsKarte"><p>Ihre Datenverbindung ist nicht ausreichend um die Position auf einer Karte anzeigen zu können. Ihre aktuelle Position ist:</p><p>' + aktuellePosition + '</p></div>');
             }
         } catch (e) {
-            $('.tphGoogleMapsKarte').html('<div id="tphGoogleMapsKarte">' + print_r(navigator) + '</div>');
+            $('.tphGoogleMapsKarte').html('<div id="tphGoogleMapsKarte"><p>Ein Fehler ist aufgetreten!</p></div>');
         }
         switch (option) {
             case 'tphParklaetzeHude':
@@ -604,7 +599,8 @@ function tphNutzeGPS(option) {
                     /* 
                      * bounds: true richtet die Karte so aus, dass alle Marker zu sehen sind.
                      * bounds: false fügt alle Marker lediglich der Karte hinzu
-                     */     $('.tphGoogleMapsKarte').gmap('addMarker', {'id': 'tphParkplatz-' + i, 'position': parkplaetze[i], 'bounds': true, 'icon': icon});
+                     */     
+                     $('.tphGoogleMapsKarte').gmap('addMarker', {'id': 'tphParkplatz-' + i, 'position': parkplaetze[i], 'bounds': true, 'icon': icon});
                 }
                 break;
             case 'tphSpielplätze':
@@ -684,7 +680,7 @@ function tphParkplaetze() {
 function tphQRCodeScan() {
 // Startet den QR-Code-Scanner function tphQRCodeScan() {
     try {
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+        var scanner = cordova.require("com.phonegap.plugins.barcodescanner.BarcodeScanner");
         scanner.scan(
                 function(result) {
                     tphSplitURL(result.text);
@@ -941,15 +937,14 @@ function tphSpeicherFotojagdBilderImLocalStorage() {
     var tphStorage = tphLadeLocalStorage();
     // id des Bildes als Index für Fotojagd benutzen
     $('a:has(img)').each(function() {
-// Wenn der Anker die Klasse 'fotojagd' enthält
+    // Wenn der Anker die Klasse 'fotojagd' enthält
         if ($(this).hasClass('fotojagd')) {
-// Und diese ID noch nicht im localStorage gesetzt ist
+            // Und diese ID noch nicht im localStorage gesetzt ist
             if (tphStorage.getItem($(this).find('img').attr('id')) === null) {
                 /* 
                  * Wird diese ID im localStorage als false (nicht gefunden) 
                  * gespeichert
                  */
-//console.log('Wird gespeichert: ' + $(this).find('img').attr('id'));
                 tphStorage.setItem($(this).find('img').attr('id'), false);
             }
         }
